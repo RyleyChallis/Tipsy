@@ -1,3 +1,12 @@
+:root {
+    --bg-color: #f9f6f1; 
+    --bg-tonal: #e8e6e2;     
+    --accent: #1e1e1e;        
+    --gold-mute: #b4975a;     
+    --font-main: 'Cormorant Garamond', serif;
+    --font-sub: 'Montserrat', sans-serif;
+}
+
 .hero-actions {
     display: flex;
     align-items: center;
@@ -25,6 +34,7 @@
     color: var(--accent);
     text-decoration: none;
     font-size: 0.8rem;
+    font-family: 'lato', sans-serif;
     letter-spacing: 1px;
     border-bottom: 1px solid var(--accent);
     padding-bottom: 4px;
@@ -59,4 +69,12 @@
 
 #inquiry .btn-primary:hover {
     color: rgba(255, 255, 255, 0.559) !important;
+}
+
+.error-btns {
+    display: flex;
+    align-items: center;
+    gap: 30px !important;
+    margin: 0 auto;
+    justify-content: center;
 }

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/query.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -86,34 +87,36 @@
             </div>
         </section>
 
-        <section class="gallery-section">
-            <div class="gallery-container">
-                
-                <div class="gallery-intro">
-                    <span class="sub-label">Visual Journal</span>
-                    <h2>The Aesthetic</h2>
+        <section id="gallery" class="aesthetic-section">
+            <div class="gallery-header">
+                <span class="sub-label">Visual Story</span>
+                <h2>The Aesthetic</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="css/img/closeup.jpg" alt="Artisanal Cocktail Close-up">
+                    <div class="item-overlay"><span>Signature Serves</span></div>
                 </div>
 
-                <div class="masonry-grid">
-                    <div class="masonry-item item-large">
-                        <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=80" alt="Bespoke Cocktail Crafting">
-                        <div class="caption">Hand-pressed botanicals</div>
-                    </div>
+                <div class="gallery-item">
+                    <img src="css/img/setup.avif" alt="Mobile Bar Setup">
+                    <div class="item-overlay"><span>The Setup</span></div>
+                </div>
 
-                    <div class="masonry-item item-tall">
-                        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=600&q=80" alt="The Mobile Bar Setup">
-                        <div class="caption">The Sussex Setup</div>
-                    </div>
+                <div class="gallery-item tall">
+                    <img src="css/img/pouring.webp" alt="Pouring a drink">
+                    <div class="item-overlay"><span>The Pour</span></div>
+                </div>
 
-                    <div class="masonry-item item-wide">
-                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80" alt="Evening Reception">
-                        <div class="caption">Evening Soirées</div>
-                    </div>
+                <div class="gallery-item">
+                    <img src="css/img/details.avif" alt="Garnish detail">
+                    <div class="item-overlay"><span>Details</span></div>
+                </div>
 
-                    <div class="masonry-item">
-                        <img src="https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=600&q=80" alt="Premium Glassware">
-                        <div class="caption">Fine Glassware</div>
-                    </div>
+                <div class="gallery-item">
+                    <img src="css/img/happyguests.avif" alt="Happy guests">
+                    <div class="item-overlay"><span>The Atmosphere</span></div>
                 </div>
             </div>
         </section>
@@ -245,5 +248,6 @@
             </div>
         </footer>
     </main>
+    <script src="css/router.js"></script>
 </body>
 </html>
