@@ -470,3 +470,9 @@ body {
     border-top: 1px solid rgba(255,255,255,0.05);
     padding-top: 30px;
 }
+
+.footer-bottom a {
+    color: var(--gold-mute);
+    text-decoration: none;
+    font-weight: 300;
+}
