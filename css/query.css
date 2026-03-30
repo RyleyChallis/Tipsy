@@ -110,6 +110,73 @@
 }
 
 @media (max-width: 768px) {
+    nav {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-container {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+    }
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin: 5px auto;
+        background-color: var(--accent); /* Your gold color */
+        transition: all 0.3s ease-in-out;
+        transform-origin: center !important;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden off-screen */
+        width: 70%;
+        height: 100vh;
+        background: var(--bg-color); /* Your dark background */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+        z-index: 1000;
+    }
+
+    /* When the 'active' class is added via JS */
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(3.5px) rotate(45deg);
+    }
+
+    .menu-toggle.is-active .bar:nth-child(2) {
+        transform: translateY(-3.5px) rotate(-45deg);
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        display: none;
+    }
     .hero-image {
         min-height: 40vh !important;
     }
@@ -330,5 +397,43 @@
     }
     .nav-col {
         margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-image {
+        min-height: 30vh !important;
+    }
+    .hero-text {
+        gap: 10px !important;
+        margin-top: 75px !important;
+    }
+    .hero-text h1 {
+        font-size: 1.6rem !important;
+    }
+    .hero-actions {
+        margin-bottom: 50px;
+    }
+    #experience h2 {
+        font-size: 2.1rem !important;
+    }
+    .experience-item, 
+    .item-body {
+        width: 100% !important;
+        max-width: 280px !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .item-body p {
+        width: 100% !important;
+        font-size: 0.9rem;
+    }
+
+    .experience-grid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0 auto !important;
+        width: 100% !important;
     }
 }

@@ -46,6 +46,7 @@
     color: var(--gold-mute);
 }
 
-.nav-toggle {
+.menu-toggle {
     display: none;
+    cursor: pointer;
 }
