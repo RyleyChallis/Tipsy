@@ -282,103 +282,120 @@ body {
     margin-left: auto;
 }
 
+/* Packages Section - Wide Layout */
 .packages-section {
-    padding: 100px 0;
+    padding: 120px 0; /* Slightly more breathing room */
     background-color: var(--bg-white, #ffffff);
 }
 
 .packages-section .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
+    max-width: 1400px; /* Increased from 80% to allow wider cards */
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
-    max-width: 700px;
+    margin-bottom: 80px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .subheading {
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
     color: var(--accent-color, #d4af37);
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
+/* Wide Grid Logic */
 .package-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 0 5%;
-    width: 100%;
-    max-width: 100%;
+    /* Increased minmax width to 350px to force wider cards */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 25px;
 }
 
 .package-card {
-    border: 1px solid #e2e1e1;
-    padding: 40px;
-    width: 350px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+    padding: 50px 40px; /* Increased internal padding for a luxury feel */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     background: #fff;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .package-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+    border-color: var(--accent-color, #d4af37);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.04);
 }
 
 .package-card.featured {
-    border-color: var(--accent-color, #d4af37);
-    background-color: #fafafa;
+    background-color: #fdfcf8; /* Very subtle tint to stand out */
+    border: 1px solid var(--accent-color, #d4af37);
 }
 
 .card-title h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif; /* Matching your editorial brand */
+    font-size: 2.2rem; /* Larger headers for wider cards */
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
 }
 
 .price {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
 }
 
 .price span {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 400;
-    color: #888;
+    color: #999;
 }
 
 .package-features {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 1; /* Pushes the footer content/note to the bottom */
 }
 
 .package-features li {
-    padding: 12px 0;
-    border-bottom: 1px solid #f5f5f5;
-    font-size: 0.95rem;
-    color: #444;
+    padding: 15px 0;
+    border-bottom: 1px solid #f8f8f8;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
 }
 
 .package-features li:last-child {
     border-bottom: none;
 }
 
-.package-note {
-    text-align: center;
-    margin-top: 50px;
-    font-style: italic;
-    color: #666;
+/* Responsive Handling */
+@media (max-width: 1100px) {
+    .package-grid {
+        /* Stacks to 2 columns earlier to keep them wide */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .package-grid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+    
+    .package-card {
+        padding: 40px 30px;
+    }
 }
 
 .testimonials-section {
