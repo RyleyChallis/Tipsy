@@ -282,10 +282,15 @@ body {
     margin-left: auto;
 }
 
-/* Packages Section */
 .packages-section {
     padding: 100px 0;
     background-color: var(--bg-white, #ffffff);
+}
+
+.packages-section .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
 }
 
 .section-header {
@@ -310,13 +315,17 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     padding: 0 5%;
+    width: 100%;
+    max-width: 100%;
 }
 
 .package-card {
-    border: 1px solid #eaeaea;
+    border: 1px solid #e2e1e1;
     padding: 40px;
+    width: 450px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .package-card:hover {
@@ -370,13 +379,6 @@ body {
     margin-top: 50px;
     font-style: italic;
     color: #666;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .package-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 .testimonials-section {
