@@ -27,17 +27,24 @@ document.addEventListener('click', async function(e) {
 
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.nav-links');
+const overlay = document.querySelector('#menu-overlay');
 
-menu.addEventListener('click', function() {
+const closeMenu = () => {
+    menu.classList.remove('is-active');
+    menuLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+};
+
+menu.addEventListener('click', () => {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
-    
-    // Prevent scrolling when menu is open
+    overlay.classList.toggle('active');
     document.body.classList.toggle('no-scroll');
 });
 
-// Close menu when a link is clicked
-document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
-    menu.classList.remove('is-active');
-    menuLinks.classList.remove('active');
-}));
+overlay.addEventListener('click', closeMenu);
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});

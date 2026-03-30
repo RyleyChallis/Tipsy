@@ -417,14 +417,14 @@
     #experience h2 {
         font-size: 2.1rem !important;
     }
-    .experience-item, 
+    .experience-item,
     .item-body {
         width: 100% !important;
         max-width: 280px !important;
         min-width: 0 !important;
         box-sizing: border-box !important;
     }
-
+    
     .item-body p {
         width: 100% !important;
         font-size: 0.9rem;

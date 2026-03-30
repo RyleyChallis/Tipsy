@@ -22,7 +22,6 @@ body {
     width: 100% !important;
 }
 
-/* Layout Containers */
 .hero {
     display: flex;
     min-height: 100vh;
@@ -280,7 +279,6 @@ body {
     margin-left: auto;
 }
 
-/* Testimonials Section */
 .testimonials-section {
     padding: 120px 0;
     background-color: var(--bg-white);
@@ -288,7 +286,7 @@ body {
 }
 
 .testimonials-container {
-    max-width: 80%; /* Fluid container as requested */
+    max-width: 80%;
     margin: 0 auto;
     text-align: center;
 }
@@ -304,7 +302,6 @@ body {
     margin-top: 1rem;
 }
 
-/* Review Layout */
 .testimonial-slider {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -329,7 +326,6 @@ body {
     font-weight: 300;
 }
 
-/* Subtle opening quote mark */
 .quote-text::before {
     content: '“';
     position: absolute;
@@ -428,7 +424,6 @@ body {
     font-weight: 400;
 }
 
-/* List Styling */
 .footer-list {
     list-style: none;
     padding: 0;
