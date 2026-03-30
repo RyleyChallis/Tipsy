@@ -1,0 +1,58 @@
+/* error.css - Dedicated 404 Styles */
+
+.error-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color); /* Inherited from styles.css */
+    text-align: center;
+    padding: 0 10%;
+}
+
+.error-content {
+    max-width: 600px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.error-content h1 {
+    font-family: var(--font-main);
+    font-size: clamp(6rem, 15vw, 10rem);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--gold-mute);
+    margin-bottom: 0;
+}
+
+.error-content h2 {
+    font-family: var(--font-main);
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: -10px;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+}
+
+.error-content p {
+    font-family: var(--font-sub);
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    color: var(--accent);
+    opacity: 0.8;
+}
+
+.drink-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    filter: sepia(0.5); /* Gives the emoji a slightly more "gold/vintage" tint */
+}
+
+/* Optional: Subtle entry animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
