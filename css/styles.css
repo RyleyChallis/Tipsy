@@ -47,6 +47,7 @@ body {
 .experience-section {
     padding: 120px 8% 100px 8%;
     background-color: var(--bg-tonal);
+    scroll-margin-top: 80px !important;
 }
 
 .container {
@@ -132,6 +133,7 @@ body {
 .aesthetic-section {
     padding: 120px 0;
     background-color: var(--bg-color);
+    scroll-margin-top: 80px;
 }
 
 .gallery-header {
@@ -213,6 +215,7 @@ body {
     padding: 120px 8%;
     background-color: var(--bg-tonal);
     border-bottom: 1px solid rgba(0,0,0,0.05);
+    scroll-margin-top: 80px;
 }
 
 .process-intro {
@@ -365,6 +368,7 @@ body {
     background-color: #111111;
     color: #ffffff;
     text-align: center;
+    scroll-margin-top: 80px;
 }
 
 .cta-content h2 {
